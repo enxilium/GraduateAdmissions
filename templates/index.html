@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Graduate Program Admission Rate Predictor</h1>
+        <form action="/" method="post" enctype=multipart/form-data>
+            <div class="form-group">
+                <label for="gre">GRE Score</label>
+                <input type="number" id="gre" name="gre" min="0" max="340" required>
+            </div>
+            <div class="form-group">
+                <label for="toefl">TOEFL Score</label>
+                <input type="number" id="toefl" name="toefl" min="0" max="120" required>
+            </div>
+            <div class="form-group">
+                <label for="sop">Statement of Purpose</label>
+                <input type="file" id="sop" name="sop" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="lor">Letter of Recommendation</label>
+                <input type="file" id="lor" name="lor" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="cgpa">Undergraduate CGPA</label>
+                <input type="number" step="0.01" id="cgpa" name="cgpa" min="0" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="research">Research Experience</label>
+                <select id="research" name="research" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="university">Select University</label>
+                <select id="university" name="university" required>
+                    <option value="">--Select University--</option>
+                    <option value="amsterdam">University of Amsterdam</option>
+                    <option value="anu">Australian National University (ANU)</option>
+                    <option value="berkeley">University of California, Berkeley</option>
+                    <option value="ucla">University of California, Los Angeles (UCLA)</option>
+                    <option value="ucsd">University of California, San Diego (UCSD)</option>
+                    <option value="caltech">California Institute of Technology (Caltech)</option>
+                    <option value="cambridge">University of Cambridge</option>
+                    <option value="cape">University of Cape Town</option>
+                    <option value="columbia">Columbia University</option>
+                    <option value="copenhagen">University of Copenhagen</option>
+                    <option value="cornell">Cornell University</option>
+                    <option value="duke">Duke University</option>
+                    <option value="edinburgh">University of Edinburgh</option>
+                    <option value="eth">ETH Zurich</option>
+                    <option value="harvard">Harvard University</option>
+                    <option value="hebrew">Hebrew University of Jerusalem</option>
+                    <option value="helsinki">University of Helsinki</option>
+                    <option value="hongkong">University of Hong Kong</option>
+                    <option value="imperial">Imperial College London</option>
+                    <option value="kaist">KAIST</option>
+                    <option value="kings">King's College London</option>
+                    <option value="kyoto">Kyoto University</option>
+                    <option value="leiden">Leiden University</option>
+                    <option value="manchester">University of Manchester</option>
+                    <option value="mcgill">McGill University</option>
+                    <option value="melbourne">University of Melbourne</option>
+                    <option value="mit">Massachusetts Institute of Technology (MIT)</option>
+                    <option value="monash">Monash University</option>
+                    <option value="munich">Ludwig Maximilian University of Munich</option>
+                    <option value="michigan">University of Michigan</option>
+                    <option value="nus">National University of Singapore (NUS)</option>
+                    <option value="ntu">Nanyang Technological University (NTU)</option>
+                    <option value="oxford">University of Oxford</option>
+                    <option value="peking">Peking University</option>
+                    <option value="princeton">Princeton University</option>
+                    <option value="queensland">University of Queensland</option>
+                    <option value="seoul">Seoul National University</option>
+                    <option value="stanford">Stanford University</option>
+                    <option value="sydney">University of Sydney</option>
+                    <option value="tokyo">University of Tokyo</option>
+                    <option value="toronto">University of Toronto</option>
+                    <option value="tsinghua">Tsinghua University</option>
+                    <option value="turing">Turing University</option>
+                    <option value="ucl">University College London (UCL)</option>
+                    <option value="uchicago">University of Chicago</option>
+                    <option value="upenn">University of Pennsylvania</option>
+                    <option value="warwick">University of Warwick</option>
+                    <option value="yale">Yale University</option>
+                    <option value="zurich">University of Zurich</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+{% endblock %}
