@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2 class="text-center">Graduate Program Admission Results</h2>
+    <div class="result-summary">
+        <h3 class="text-center">Estimated Admission Probability: <span class="percentage">{{ result }}%</span></h3>
+    </div>
+    <div class="scores">
+        <h4>Scores Breakdown by Category:</h4>
+        <ul class="list-group">
+            <li class="list-group-item">GRE Score: <span class="score">{{ GRE }}</span></li>
+            <li class="list-group-item">TOEFL Score: <span class="score">{{ TOEFL }}</span></li>
+            <li class="list-group-item">University Rating: <span class="score">{{ university }}</span></li>
+            <li class="list-group-item">Statement of Purpose Rating: <span class="score">{{ sop }}</span></li>
+            <li class="list-group-item">Letter of Recommendation Rating: <span class="score">{{ lor }}</span></li>
+            <li class="list-group-item">CGPA: <span class="score">{{ CGPA }}</span></li>
+            <li class="list-group-item">Research Experience: <span class="score">{{ research }}</span></li>
+        </ul>
+    </div>
+
+    <button class="btn btn-primary" class="submit-btn" onclick="window.location.href='/'">Back</button>
+    <footer>Note that this percentage is derived from an AI model, and is meant to serve as a benchmark only. Results may be inaccurate. For more info, see <a href="https://github.com/enxilium/GraduateAdmissions">https://github.com/enxilium/GraduateAdmissions.</a></footer>
+</div>
+{% endblock %}
